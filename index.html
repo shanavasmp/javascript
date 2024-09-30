@@ -7,5 +7,14 @@
 </head>
 <body>
     <h4>java script</h4>
+    <p id="myText">Click the button to change this text.</p>
+
+    <button onclick="changeText()">Click Me!</button>
+
+    <script>
+        function changeText() {
+            document.getElementById("myText").innerHTML = "Hello! The text has been changed.";
+        }
+    </script>
 </body>
 </html>
