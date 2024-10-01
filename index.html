@@ -10,10 +10,14 @@
     <p id="myText">Click the button to change this text.</p>
 
     <button onclick="changeText()">Click Me!</button>
-
+    <h1>Background Color Changer</h1>
+    <button onclick="changeBackgroundColor()">Change Background Color</button>
     <script>
         function changeText() {
             document.getElementById("myText").innerHTML = "Hello! The text has been changed.";
+        }
+                function changeBackgroundColor() {
+            document.body.style.backgroundColor = "lightblue";
         }
     </script>
 </body>
