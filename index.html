@@ -12,12 +12,25 @@
     <button onclick="changeText()">Click Me!</button>
     <h1>Background Color Changer</h1>
     <button onclick="changeBackgroundColor()">Change Background Color</button>
+    
+    <h1>Show and Hide Text Example</h1>
+
+    <p id="myParagraph">This is a paragraph that can be shown or hidden.</p>
+    <button onclick="toggleText()">Show/Hide Text</button>
     <script>
         function changeText() {
             document.getElementById("myText").innerHTML = "Hello! The text has been changed.";
         }
                 function changeBackgroundColor() {
             document.body.style.backgroundColor = "lightblue";
+        }
+        function toggleText() {
+            var paragraph = document.getElementById("myParagraph");
+            if (paragraph.style.display === "none") {
+                paragraph.style.display = "block";
+            } else {
+                paragraph.style.display = "none";
+            }
         }
     </script>
 </body>
