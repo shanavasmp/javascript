@@ -17,6 +17,13 @@
 
     <p id="myParagraph">This is a paragraph that can be shown or hidden.</p>
     <button onclick="toggleText()">Show/Hide Text</button>
+
+
+    <h1>Change Text Example</h1>
+    <p id="textToChange">This is the original text.</p>
+    <button onclick="changeText()">Change Text</button>
+
+
     <script>
         function changeText() {
             document.getElementById("myText").innerHTML = "Hello! The text has been changed.";
@@ -31,6 +38,10 @@
             } else {
                 paragraph.style.display = "none";
             }
+        }
+
+        function changeText() {
+            document.getElementById("textToChange").innerHTML = "The text has been changed!";
         }
     </script>
 </body>
