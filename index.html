@@ -58,6 +58,27 @@
         .next {
             right: 0;
         }
+
+                /* Element that will fade in */
+                .hidden {
+            opacity: 0;
+            transition: opacity 1s ease-in;
+        }
+
+        /* Class to make the element visible */
+        .visible {
+            opacity: 1;
+        }
+
+        /* A spacer to make the page scrollable */
+        .spacer {
+            height: 100vh;
+        }
+
+        .content {
+            text-align: center;
+            padding: 20px;
+        }
 </style>
 <body>
     <h4>java script</h4>
@@ -92,7 +113,12 @@
     </div>
 
 
+    <div class="spacer"></div> <!-- Spacer for scrolling -->
 
+    <div class="content hidden" id="fadeInElement">
+        <h2>Hello, I'm fading in!</h2>
+        <p>This text will appear when you scroll down.</p>
+    </div>
 
 
 
@@ -144,6 +170,20 @@ function moveSlide(step) {
 setInterval(() => {
     moveSlide(1);
 }, 3000);
+        // Function to check if the element is in the viewport
+        function showOnScroll() {
+            const element = document.getElementById('fadeInElement');
+            const elementPosition = element.getBoundingClientRect().top;
+            const screenHeight = window.innerHeight;
+
+            // Check if the element is within the viewport
+            if (elementPosition < screenHeight) {
+                element.classList.add('visible');
+            }
+        }
+
+        // Listen for scroll events
+        window.addEventListener('scroll', showOnScroll);
     </script>
 </body>
 </html>
