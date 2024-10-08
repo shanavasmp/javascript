@@ -79,6 +79,23 @@
             text-align: center;
             padding: 20px;
         }
+                /* Element to animate */
+        .box {
+            width: 100px;
+            height: 100px;
+            background-color: coral;
+            position: relative;
+        }
+
+        /* Animation styles */
+        @keyframes moveRight {
+            from { left: 0; }
+            to { left: 200px; }
+        }
+
+        .animate {
+            animation: moveRight 2s forwards;
+        }
 </style>
 <body>
     <h4>java script</h4>
@@ -125,7 +142,8 @@
 
 
 
-
+    <div class="box" id="animateBox"></div>
+    <button onclick="startAnimation()">Start Animation</button>
     <script>
         function changeText() {
             document.getElementById("myText").innerHTML = "Hello! The text has been changed.";
@@ -184,6 +202,10 @@ setInterval(() => {
 
         // Listen for scroll events
         window.addEventListener('scroll', showOnScroll);
+                function startAnimation() {
+            var box = document.getElementById('animateBox');
+            box.classList.add('animate'); // Add the animation class
+        }
     </script>
 </body>
 </html>
