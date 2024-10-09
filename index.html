@@ -96,6 +96,47 @@
         .animate {
             animation: moveRight 2s forwards;
         }
+                /* Slider container */
+                .carousel {
+            width: 300px;
+            height: 200px;
+            overflow: hidden;
+            position: relative;
+            margin: auto;
+        }
+
+        /* Slides container */
+        .slides {
+            display: flex;
+            width: 100%;
+            transition: transform 0.5s ease-in-out;
+        }
+
+        /* Individual slide */
+        .slides img {
+            width: 100%;
+            height: auto;
+        }
+
+        /* Control buttons */
+        .prev, .next {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: rgba(0, 0, 0, 0.5);
+            color: white;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+        }
+
+        .prev {
+            left: 10px;
+        }
+
+        .next {
+            right: 10px;
+        }
 </style>
 <body>
     <h4>java script</h4>
@@ -138,12 +179,20 @@
     </div>
 
 
-
-
-
++
 
     <div class="box" id="animateBox"></div>
     <button onclick="startAnimation()">Start Animation</button>
+
+    <div class="carousel">
+        <div class="slides" id="slides">
+            <img src="https://via.placeholder.com/300x200/ff7f7f/333333?text=Slide+1" alt="Slide 1">
+            <img src="https://via.placeholder.com/300x200/7f7fff/333333?text=Slide+2" alt="Slide 2">
+            <img src="https://via.placeholder.com/300x200/7fff7f/333333?text=Slide+3" alt="Slide 3">
+        </div>
+        <button class="prev" onclick="moveSlide(-1)">❮</button>
+        <button class="next" onclick="moveSlide(1)">❯</button>
+    </div>
     <script>
         function changeText() {
             document.getElementById("myText").innerHTML = "Hello! The text has been changed.";
@@ -206,6 +255,23 @@ setInterval(() => {
             var box = document.getElementById('animateBox');
             box.classList.add('animate'); // Add the animation class
         }
+        let currentSlide = 0;
+
+function moveSlide(step) {
+    const slides = document.getElementById('slides');
+    const totalSlides = slides.children.length;
+
+    // Update current slide index
+    currentSlide = (currentSlide + step + totalSlides) % totalSlides;
+
+    // Move the slides
+    slides.style.transform = `translateX(-${currentSlide * 100}%)`;
+}
+
+// Auto-slide every 3 seconds
+setInterval(() => {
+    moveSlide(1);
+}, 3000);
     </script>
 </body>
 </html>
