@@ -1,0 +1,291 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto:400,400i,700");
+
+/* * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+} */
+
+
+.hero{
+  justify-content: center;
+  align-items: center;
+  padding: 40px 0px;
+  background-image: url("/assets/images/home-page-images/hero.webp");
+  background-position: 45% 40%;
+  
+}
+.swap-bttn{
+  background-color: #ffffff;
+  border-radius:50%;
+  color: rgb(0, 0, 0);
+  border: 1px solid #a5b4fc;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 30px;
+  width: 30px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+
+}
+.swap-bttn:hover {
+  background-color: #49dd81; /* New color on hover */
+  color: white;
+}
+.form-floating{
+    border: 2px solid #bfc0c4;
+    background-color: white;
+}
+
+
+.tab-buttons {
+  display: flex;
+  gap: 8px;
+}
+
+.tab-btn {
+  width: 115px;
+  border: none;
+  color: #020617;
+  background-color: #f0f8ff;
+  border-radius: 5px 5px 0px 0px;
+  font-weight: 500;
+  padding: 12px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+.tab-btn:hover {
+  background-color: #a5b4fc;
+}
+.tab-btn.active {
+  background-color: #49dd81;
+  color: #ffffff;
+}
+
+.content {
+  display: none;
+}
+.content.show {
+  display: block;
+  gap: 14px;
+  background-color: #ffffff;
+  border-radius: 0px 8px 8px 8px;
+  /* padding: 16px; */
+}
+
+.content svg {
+  width: 50%;
+  height: 200px;
+}
+.form-bg{
+    background-color: #ffffff;
+    border-radius: 10px ;
+}
+.search-button {
+    background-color: #49dd81;
+    color: #ffffff; /* White text color */
+    padding: 20px ; /* Adjust padding */
+    border: none; /* No border */
+    /* Rounded corners */
+    font-size: 16px; /* Font size */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s ease; /* Smooth hover effect */
+}
+
+/* Hover effect */
+.search-button:hover {
+    background-color: #1f2937; /* Darker shade on hover */
+    color: #e5e7eb; /* Slightly lighter text on hover */
+}
+/* .form-container{
+    padding: 30px 30px 0px 30px;
+} */
+/* .section{
+    height: 150px;
+} */
+ .border-bottom-none{
+  border-bottom: none;
+ }
+ .border-right-none{
+  border-right: none;
+ }
+ .border-left-none{
+  border-left: none;
+ }
+ .border-top-none{
+  border-top: none;
+ }
+
+ .form-check-input {
+  border: 1px solid  #49dd81; 
+}
+.icon-margin {
+    margin: 0 8px; /* Adjust the margin value as needed */
+}
+.departure, .return{
+  padding: 10px 0px 10px 10px;
+}
+/* .depart, .arrive{
+  padding-left: 18px !important;
+} */
+ 
+/* .card-border-none{
+  border: none;
+  border-radius: 5px;
+} */
+.section-card{
+  padding: 40px 0px;
+}
+.owl-carousel .card {
+    height: 100%;
+  }
+
+  .owl-carousel .card-img-top {
+    height: 200px; /* Set your desired height */
+    width: 200px; /* Ensure the image takes the full width of the card */
+    object-fit: cover; /* Ensures the image covers the entire space without distortion */
+  }
+  .first-courosel .card img{
+border-radius: 30px;
+height: 150px;
+  }
+  .second-slider .card img{
+    border-radius: 30px;
+    height: 150px
+  }
+
+
+.control-btn {
+      padding: 9px 10px;
+      margin: 4px;
+      background-color: #ccf7c1;
+      color: rgb(0, 0, 0);
+      border: none;
+      cursor: pointer;
+      border-radius: 50%;
+    }
+
+    .control-btn:hover {
+      background-color: #00b309;
+    }
+  
+.footer{
+padding: 40px 0px;
+  background-color: rgb(8, 3, 54);
+ 
+}
+.brand{
+  color:#49dd81 ;
+}
+.card-bg{
+
+  background-size: cover;
+  height: 150px;
+  border-radius: 20px;
+  color: white;
+  display: flex;
+  align-items: end;
+  padding: 0 15px;
+  
+}
+
+.card-bg h5{
+  color: white;
+}
+
+.card-1 {
+  background-image: url("/assets/images/home-page-images/paris.webp");
+}
+
+.card-second {
+  background-image: url("/assets/images/home-page-images/london.webp");
+}
+.card-3{
+  background-image: url("/assets/images/home-page-images/dxb.webp");
+}
+.slide-card-1{
+  background-image: url("/assets/images/home-page-images/kerala.webp");
+  background-position: bottom;
+}
+.slide-card-2{
+  background-image: url("/assets/images/home-page-images/england.webp");
+   
+}
+.card-offer{
+  font-size: 14px;
+  font-weight: 400;
+}
+.slide-card-3{
+  background-image: url("/assets/images/home-page-images/egyp.webp");
+}
+.slide-card-4{
+  background-image: url("/assets/images/home-page-images/Usa.webp"); 
+}
+.slide-card-5{
+  background-image: url("/assets/images/home-page-images/img_3.jpg");  
+}
+.card p{
+  margin-bottom: 5px;
+}
+.card-span {
+  font-weight: bold;
+  font-size: 19px;
+  margin-bottom: 5px;
+} 
+
+.passenger-collapse{
+  top: 35px;
+}
+
+
+
+
+
+
+
+.selected-offer {
+  border: 2px solid #49dd81; /* Customize the border */
+  position: relative;
+}
+
+.check-icon {
+  position: absolute;
+  top: -12px;
+  right: -1px;
+  font-size: 12px;
+  color: #00246e;
+  background-color: #49dd81;
+  padding: 3px 13px;
+  border-radius: 10px;
+}
+
+hr {
+  margin: 0rem 0 !important;
+}
+
+.pc-container { 
+  top: 307px !important;
+}
+
+
+.pc-footer{
+  margin-top: 307px !important;
+}
+
+
+.suggestions{
+  width: 350px !important;
+  cursor: pointer;
+  -webkit-box-shadow: 0px 0px 10px 2px rgba(0,0,0,0.2);
+  -moz-box-shadow: 0px 0px 10px 2px rgba(0,0,0,0.2);
+  box-shadow: 0px 0px 10px 2px rgba(0,0,0,0.2);
+}
+
+.airport-input {
+  font-size: 16px !important;
+}
