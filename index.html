@@ -138,6 +138,7 @@
             right: 10px;
         }
         .item {
+            display: none; /* Hide all items by default */
             padding: 10px;
             border: 1px solid #ccc;
             margin: 5px;
@@ -200,13 +201,29 @@
     </div>
 
 
-    <input type="text" id="search" placeholder="Filter items...">
+    <h2>Select an item:</h2>
+    <label>
+        <input type="radio" name="filter" value="apple"> Apple
+    </label>
+    <label>
+        <input type="radio" name="filter" value="banana"> Banana
+    </label>
+    <label>
+        <input type="radio" name="filter" value="orange"> Orange
+    </label>
+    <label>
+        <input type="radio" name="filter" value="grapes"> Grapes
+    </label>
+    <label>
+        <input type="radio" name="filter" value="pineapple"> Pineapple
+    </label>
+
     <div id="itemList">
-        <div class="item">Apple</div>
-        <div class="item">Banana</div>
-        <div class="item">Orange</div>
-        <div class="item">Grapes</div>
-        <div class="item">Pineapple</div>
+        <div class="item" data-value="apple">This is an Apple.</div>
+        <div class="item" data-value="banana">This is a Banana.</div>
+        <div class="item" data-value="orange">This is an Orange.</div>
+        <div class="item" data-value="grapes">This is Grapes.</div>
+        <div class="item" data-value="pineapple">This is a Pineapple.</div>
     </div>
     <script>
 

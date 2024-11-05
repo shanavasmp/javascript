@@ -77,15 +77,19 @@ setInterval(() => {
 moveSlide(1);
 }, 3000);
 
-document.getElementById('search').addEventListener('keyup', function() {
-    const searchTerm = this.value.toLowerCase();
-    const items = document.querySelectorAll('.item');
+const radios = document.querySelectorAll('input[name="filter"]');
+const items = document.querySelectorAll('.item');
 
-    items.forEach(item => {
-        if (item.textContent.toLowerCase().includes(searchTerm)) {
-            item.style.display = 'block'; // Show item
-        } else {
-            item.style.display = 'none'; // Hide item
-        }
+radios.forEach(radio => {
+    radio.addEventListener('change', () => {
+        const selectedValue = radio.value;
+
+        items.forEach(item => {
+            if (item.getAttribute('data-value') === selectedValue) {
+                item.style.display = 'block'; // Show the selected item
+            } else {
+                item.style.display = 'none'; // Hide other items
+            }
+        });
     });
 });
