@@ -76,3 +76,16 @@ slides.style.transform = `translateX(-${currentSlide * 100}%)`;
 setInterval(() => {
 moveSlide(1);
 }, 3000);
+
+document.getElementById('search').addEventListener('keyup', function() {
+    const searchTerm = this.value.toLowerCase();
+    const items = document.querySelectorAll('.item');
+
+    items.forEach(item => {
+        if (item.textContent.toLowerCase().includes(searchTerm)) {
+            item.style.display = 'block'; // Show item
+        } else {
+            item.style.display = 'none'; // Hide item
+        }
+    });
+});

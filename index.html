@@ -137,6 +137,11 @@
         .next {
             right: 10px;
         }
+        .item {
+            padding: 10px;
+            border: 1px solid #ccc;
+            margin: 5px;
+        }
 </style>
 <body>
     <h4>java script</h4>
@@ -192,6 +197,16 @@
         </div>
         <button class="prev" onclick="moveSlide(-1)">❮</button>
         <button class="next" onclick="moveSlide(1)">❯</button>
+    </div>
+
+
+    <input type="text" id="search" placeholder="Filter items...">
+    <div id="itemList">
+        <div class="item">Apple</div>
+        <div class="item">Banana</div>
+        <div class="item">Orange</div>
+        <div class="item">Grapes</div>
+        <div class="item">Pineapple</div>
     </div>
     <script>
 
