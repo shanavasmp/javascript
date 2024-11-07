@@ -93,3 +93,14 @@ radios.forEach(radio => {
         });
     });
 });
+
+document.getElementById('add-button').addEventListener('click', function() {
+    // Create a new input element
+    const newInput = document.createElement('input');
+    newInput.type = 'text';
+    newInput.name = 'input[]';
+    newInput.placeholder = 'Enter text';
+
+    // Append the new input field to the container
+    document.getElementById('input-container').appendChild(newInput);
+});
