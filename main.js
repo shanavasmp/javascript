@@ -104,3 +104,18 @@ document.getElementById('add-button').addEventListener('click', function() {
     // Append the new input field to the container
     document.getElementById('input-container').appendChild(newInput);
 });
+// Select the toggle button
+const toggleButton = document.getElementById('toggleButton');
+
+// Add a click event listener to the button
+toggleButton.addEventListener('click', () => {
+    // Toggle the "active" class
+    toggleButton.classList.toggle('active');
+
+    // Toggle the button text based on its state
+    if (toggleButton.classList.contains('active')) {
+        toggleButton.textContent = 'ON';
+    } else {
+        toggleButton.textContent = 'OFF';
+    }
+});
