@@ -119,3 +119,18 @@ toggleButton.addEventListener('click', () => {
         toggleButton.textContent = 'OFF';
     }
 });
+// Select the button and content elements
+const toggleButton = document.getElementById('toggleButton');
+const toggleContent = document.getElementById('toggleContent');
+
+// Add a click event listener to the button
+toggleButton.addEventListener('click', () => {
+    // Toggle the content's visibility
+    if (toggleContent.style.display === 'none' || toggleContent.style.display === '') {
+        toggleContent.style.display = 'block';
+        toggleButton.textContent = 'Hide Content';
+    } else {
+        toggleContent.style.display = 'none';
+        toggleButton.textContent = 'Show Content';
+    }
+});
