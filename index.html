@@ -157,6 +157,25 @@
         .active {
             background-color: #28a745;
         }
+                /* Button and content styles */
+                .toggle-btn {
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+            border-radius: 5px;
+        }
+
+        /* Hidden content */
+        #toggleContent {
+            display: none;
+            margin-top: 20px;
+            padding: 10px;
+            background-color: #f1f1f1;
+            border: 1px solid #ccc;
+        }
 </style>
 <body>
     <h4>java script</h4>
@@ -248,6 +267,10 @@
     <script>
 
     </script>
+        <button id="toggleButton" class="toggle-btn">Show Content</button>
+
+        <!-- Content to be shown/hidden -->
+        <div id="toggleContent">This is some toggleable content!</div>
     <script src="main.js"></script>
 </body>
 </html>
